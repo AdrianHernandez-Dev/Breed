@@ -1,4 +1,3 @@
-https://dog.ceo/api/breed/hound/images/random
 
 'use strict';
 
@@ -30,7 +29,15 @@ function displayResults(responseJson) {
 }
 }
 
+function clear(){
+  $('#clear').on('click', function(event){
+    $('section').empty();
+    location.reload();
+  })
+}
+
 $(function() {
   console.log('App loaded! Waiting for submit!');
   watchForm();
+  clear();
 });
